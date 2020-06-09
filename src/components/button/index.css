@@ -6,3 +6,9 @@
   margin: 0.5em;
   padding: 1em 1.5em;
 }
+
+.button:focus {
+  border: 1px solid #0099CC;
+  border-radius: 0.5em;
+  outline: none;
+}
