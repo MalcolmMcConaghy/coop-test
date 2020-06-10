@@ -1,0 +1,35 @@
+.searchJoke__title {
+  font-size: 1.5em;
+  margin: 0.5em auto;
+  max-width: 20em;
+  padding: 0 0.5em;
+  text-align: center;
+}
+
+.searchJoke__form {
+  display: flex;
+  margin: 1em auto 2em;
+  max-width: 20em;
+  width: 80%;
+}
+
+.searchJoke__form-input-name {
+  width: 100%;
+}
+
+.searchJoke__linkButton {
+  background-color: #046AB8;
+  border: none;
+  border-radius: 0.5em;
+  color: #FFFFFF;
+  font-size: 1em;
+  margin: 0 0.5em;
+  padding: 1em 1.5em;
+  text-decoration: none;
+}
+
+.searchJoke__linkButton:focus {
+border: 1px solid #0099CC;
+border-radius: 0.5em;
+outline: none;
+}

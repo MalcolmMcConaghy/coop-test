@@ -1,7 +1,9 @@
 export const jokeFetch = (firstName, lastName) => {
   let fetchUrl = 'http://api.icndb.com/jokes/random?escape=javascript&exclude=[explicit]';
 
-  if (firstName) {
+  if (firstName && !lastName) {
+    fetchUrl = `http://api.icndb.com/jokes/random?escape=javascript&exclude=[explicit]&firstName=${firstName}&lastName=`;
+  } else if (firstName && lastName) {
     fetchUrl = `http://api.icndb.com/jokes/random?escape=javascript&exclude=[explicit]&firstName=${firstName}&lastName=${lastName}`;
   };
 

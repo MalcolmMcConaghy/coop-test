@@ -7,11 +7,13 @@ import {
 } from "react-router-dom";
 
 import './index.css';
+import Header from '../src/components/header';
 import Homepage from '../src/components/homepage';
 import SearchJoke from '../src/components/searchJoke'
 
 ReactDOM.render(
   <React.StrictMode>
+    <Header />
     <Router>
       <Switch>
         <Route path="/searchJoke">
