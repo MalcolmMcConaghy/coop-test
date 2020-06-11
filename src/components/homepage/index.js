@@ -18,8 +18,8 @@ const Homepage = () => {
     <Fragment>
       <h1 className="homepage__title">{joke}</h1>
       <div className="homepage__jokeButtons">
-        <Button onButtonClick={onRandomJokeClick}>Random Joke</Button>
-        <Link className="homepage__linkButton" to="/searchJoke">Search Joke</Link>
+        <Button onButtonClick={onRandomJokeClick} testId='randomJoke'>Random Joke</Button>
+        <Link className="homepage__linkButton" to="/searchJoke" data-testid="searchJoke">Search Joke</Link>
       </div>
     </Fragment>
   );

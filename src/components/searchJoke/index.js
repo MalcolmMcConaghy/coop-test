@@ -20,10 +20,9 @@ const SearchJoke = () => {
       jokeFetch(firstName, lastName)
       .then(joke => setJoke(joke));
     } else {
-      setJoke('Put fecking letters only in ya twat')
-    }
-
-  }
+      setJoke('Please enter only letters and spaces');
+    };
+  };
 
   return (
     <Fragment>
@@ -36,7 +35,7 @@ const SearchJoke = () => {
           placeholder="Enter your first and last name"
           className="searchJoke__form-input-name"
         />
-        <Button onButtonClick={onSearchJokeClick}>Search</Button>
+        <Button onButtonClick={onSearchJokeClick} testId="searchCustomJoke">Search</Button>
       </form>
       <Link to="/" className="searchJoke__linkButton">Back to Home</Link>
     </Fragment>

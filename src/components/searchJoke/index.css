@@ -29,7 +29,7 @@
 }
 
 .searchJoke__linkButton:focus {
-border: 1px solid #0099CC;
-border-radius: 0.5em;
-outline: none;
+  border: 1px solid #0099CC;
+  border-radius: 0.5em;
+  outline: none;
 }
