@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Chuck Norris Joke Generator
+
+A Chuck Norris Joke Generator where you can be the Chuck! Choose a random Chuck Norris joke or fill in an input and put yourself in place of Chuck
+
+Built using CRA, React Testing Library and CSS.
 
 ## Available Scripts
 

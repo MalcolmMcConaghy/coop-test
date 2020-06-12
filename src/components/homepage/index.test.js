@@ -6,6 +6,10 @@ import fetchMock from 'fetch-mock-jest';
 import Homepage from './index';
 
 describe('Homepage component', () => {
+  afterEach(() => {
+    fetchMock.restore();
+  })
+
   it('should render the component', () => {
     const { getByText } = render(
       <Router>
@@ -38,7 +42,21 @@ describe('Homepage component', () => {
     await waitFor(() => expect(titleElement.innerHTML).toBe('Chuck Norris hosting is 101% uptime guaranteed.'));
   });
 
-  it('should throw an alert if fetch fails', () => {
+  it('should throw an alert if fetch fails', async () => {
+    const { getByTestId } = render(
+      <Router>
+        <Homepage />
+      </Router>
+    );
 
+    window.alert = jest.fn();
+
+    fetchMock.get('http://api.icndb.com/jokes/random?escape=javascript&exclude=[explicit]', 500);
+    
+    const randomJokeButton = getByTestId(/randomJoke/i);
+
+    fireEvent.click(randomJokeButton);
+
+    await waitFor(() => expect(window.alert).not.toHaveBeenCalled());
   });
 });
